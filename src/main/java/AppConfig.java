@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
 @Configuration
-public class AppConfig<scope> {
+public class AppConfig {
 
     @Bean(name = "helloworld")
     public HelloWorld getHelloWorld() {
@@ -17,7 +17,8 @@ public class AppConfig<scope> {
     @Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
     public Cat getCat() {
         Cat cat = new Cat();
-        cat.setCat(cat);
+        cat.setName("Simba");
+        cat.setColour("Black");
         return cat;
     }
 }

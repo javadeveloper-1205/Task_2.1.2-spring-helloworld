@@ -5,10 +5,11 @@ public class App {
     public static void main(String[] args) {
         ApplicationContext applicationContext =
                 new AnnotationConfigApplicationContext(AppConfig.class);
-        HelloWorld bean =
-                (HelloWorld) applicationContext.getBean("helloworld");
-        Cat beanCat = (Cat) applicationContext.getBean("cat");
-        System.out.println(bean.getMessage());
-        System.out.println(beanCat.getCat());
+        HelloWorld tree = (HelloWorld) applicationContext.getBean("helloworld");
+        HelloWorld leaf = (HelloWorld) applicationContext.getBean("helloworld");
+        Cat one = (Cat) applicationContext.getBean("cat");
+        Cat two = (Cat) applicationContext.getBean("cat");
+        System.out.println(tree == leaf);
+        System.out.println(one == two);
     }
 }

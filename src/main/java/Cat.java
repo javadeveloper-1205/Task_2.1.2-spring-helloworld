@@ -1,11 +1,20 @@
 public class Cat {
-    private Cat cat;
+    public String name;
+    public String colour;
 
-    public Cat getCat() {
-        return cat;
+    public String getName() {
+        return name;
     }
 
-    public void setCat(Cat cat) {
-        this.cat = cat;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getColour() {
+        return colour;
+    }
+
+    public void setColour(String colour) {
+        this.colour = colour;
     }
 }
